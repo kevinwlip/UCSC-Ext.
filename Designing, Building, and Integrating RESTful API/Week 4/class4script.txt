@@ -1,0 +1,16 @@
+(InteractiveConsole)
+>>> from rest_framework.authtoken.models import Token
+>>> from django.contrib.auth.models import User
+>>> user = User.objects.get(username='john')
+>>> user
+<User: john>
+>>> token = Token.objects.create(user=user)
+>>> token.key
+'19ecfb170d5d4bf2407f33f17f179c51176d7c87'
+>>> user
+<User: john>
+>>> user.auth_token
+<Token: 19ecfb170d5d4bf2407f33f17f179c51176d7c87>
+>>> user.auth_token.delete()
+(1, {'authtoken.Token': 1})
+>>>
