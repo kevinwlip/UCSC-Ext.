@@ -1,0 +1,39 @@
+MongoDB (NoSQL)
+
+Install
+- mongoengine and
+- django-rest-framework-mongoengine
+
+
+decouple authenticaion / permissions / storage
+
+
+
+Customized POST and PUT
+
+POST /accounts
+[{
+    "name": "...",
+    "industry": "...",
+    "contacts": [{
+        "name": "...",
+        "phone": "..."
+    }]
+}, {
+    "name": "...",
+    "industry": "..."
+}]
+
+PUT /accounts
+[{
+    "id": 4,
+    "name": "...",
+    "industry": "...",
+    "contacts": {
+        "name": "..."
+    }
+}, {
+    "id": 5,
+    "name": "...",
+    "industry": "..."
+}]
